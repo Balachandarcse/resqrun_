@@ -59,7 +59,8 @@ class _BookingScreenState extends State<BookingScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/Searching');
                 },
-                child: Text('Book for Yourself'),
+                child: Text('Book for Yourself',
+                    style: TextStyle(color: Colors.white)),
               ),
               SizedBox(height: 20),
               ElevatedButton(
@@ -74,7 +75,8 @@ class _BookingScreenState extends State<BookingScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/Searching');
                 },
-                child: Text('Book for Someone'),
+                child: Text('Book for Someone',
+                    style: TextStyle(color: Colors.white)),
               ),
             ],
           ),

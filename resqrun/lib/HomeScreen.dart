@@ -40,6 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('$userType Home'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            onPressed: () {
+              Navigator.pushNamed(context, '/profile');
+            },
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -99,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               leading: Icon(Icons.local_hospital),
-              title: Text('ResQRun Features'),
+              title: Text('Credit points'),
               onTap: () {},
             ),
             ListTile(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'getStarted.dart';
 import 'RoleSeclection.dart';
 import 'driver.dart';
@@ -10,8 +11,10 @@ import 'Searching.dart';
 import 'NONetwork.dart';
 import 'profile.dart';
 
-void main() {
+void main() async {
+   
   runApp(MyApp());
+  await Firebase.initializeApp();
 }
 
 class MyApp extends StatelessWidget {
@@ -32,8 +35,8 @@ class MyApp extends StatelessWidget {
         '/booking': (context) => BookingScreen(),
         '/driver-signup': (context) => DriverSignUpScreen(),
         '/driver-login': (context) => DriverLoginScreen(),
-        '/user-signup': (context) => UserSignUpScreen(),
-        '/user-login': (context) => UserLoginScreen(),
+        '/user-signup': (context) => SignUpScreen(),
+        '/user-login': (context) => LoginScreen(),
         '/Searching': (context) => SearchingPage(),
         '/NONetwork': (context) => NoNetworkScreen(),
         '/profile': (context) => ProfileScreen(),
